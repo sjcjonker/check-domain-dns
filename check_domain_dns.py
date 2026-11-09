@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Compare DNS records with a deliberately created local baseline.
+# Author: Stijn Jonker (sjcjonker) | https://github.com/sjcjonker
+# Usage: python3 check_domain_dns.py example.com
+# Requires dnspython; --baseline initializes and --update replaces state. Help: --help.
+# Nagios exit codes: 0 OK, 1 WARNING, 2 CRITICAL, 3 UNKNOWN.
 """Nagios DNS record integrity checker (requires python3-dnspython)."""
 import argparse
 import ipaddress
